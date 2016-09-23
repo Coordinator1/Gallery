@@ -1,0 +1,60 @@
+<ion-view view-title="Контакты" cache-view="true" align-title="center">
+    <ion-content class="background">
+        <div class="center-bold margin-top">
+            <p>Заказать натяжные потолки в Москве:</p>
+        </div>
+        <div class="contacts">
+            <p>Наш адрес:</p>
+        </div>
+        <div>
+            <p class="contacts-color">ул. Родниковая, 20</p>
+        </div>
+        <div class="contacts">
+            <p>Многоканальный телефон:</p>
+        </div>
+        <div>
+            <p class="contacts-color">(499) 643-46-33</p>
+        </div>
+        <div class="contacts">
+            <p>E-mail для России:</p>
+        </div>
+        <div>
+            <p class="contacts-color">zakaz@astam.ru</p>
+        </div>
+        <div class="contacts">
+            <p>График работы:</p>
+        </div>
+        <div>
+            <p class="contacts-color">Пн-Пт: 8.00-20.00</p>
+            <p class="contacts-color">Сб-Вс: 8.00-17.00</p>
+        </div>
+        <div class="contacts-center">
+            <p>Форма связи:</p>
+        </div>
+        <form name="contactsForm">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="Имя" ng-model="order.name">
+                </label>
+                <label class="item item-input">
+                    <input type="email" placeholder="E-mail" ng-model="order.email">
+                </label>
+                <label class="item item-input">
+                    <textarea placeholder="Комментарий" rows="8" cols="10" ng-model="order.message" class="contacts-textarea"></textarea>
+                </label>
+            </div>
+            <div class="row responsive-sm responsive-md responsive-lg">
+                <div class="col text-center">
+                    <button class="button button-positive" type="submit" ng-click="submit()" onclick='this.form.submit();this.form.reset()'>
+                        Отправить
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="contacts-center">
+            <p>Компания "Аста Мануфактура" - на карте города</p>
+        </div>
+        <div id="map" data-tap-disabled="true" ng-init="initMap()">
+        </div>
+    </ion-content>
+</ion-view>

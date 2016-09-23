@@ -1,0 +1,58 @@
+<ion-view view-title="Конструкция Круг с подсветкой" cache-view="true">
+    <ion-content class="background">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width"></div>
+                <div class="swiper-slide"><img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width"></div>
+                <div class="swiper-slide"><img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width"></div>
+                <div class="swiper-slide"><img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="row center-bold responsive-sm responsive-md responsive-lg">
+            <div class="col">Конструкция "Крус с подсветкой"</div>
+        </div>
+        <div class="row desc-padding-left responsive-sm responsive-md responsive-lg">
+            <p>Конструкция двухуровневых натяжных потолков круглой формы устанавливается с подсветкой. Каркасы со светодиодной лентой имеют дополнительные преимущества.</p>
+        </div>
+        <div class="row center-bold">
+            <div class="col desc-title">Техничиские характеристики</div>
+        </div>
+        <div class="row">
+            <div class="col col-50 left-table">Длина конструкции</div>
+            <div class="col col-50 right-table">5,02 п.м.</div>
+        </div>
+        <div class="row">
+            <div class="col col-50 left-table">Габариты</div>
+            <div class="col col-50 right-table">диаметр 1,6 м</div>
+        </div>
+        <div class="row">
+            <div class="col col-50 left-table">Используется профиль</div>
+            <div class="col col-50 right-table">КП-2 и НП-5 (каркасный и нишевой профиль для перехода уровня с подсветкой)</div>
+        </div>
+        <div class="row">
+            <div class="col col-50 left-table">Специфика</div>
+            <div class="col col-50 right-table">двухуровневая конструкция с переходом уровня 5 см с подсветкой</div>
+        </div>
+        <div ng-hide="hideuTube">
+            <div class="row center-bold responsive-sm responsive-md responsive-lg">
+                <div class="col">Видеоролик проекта:</div>
+            </div>
+            <div class="list card" ng-repeat="video in videos">
+                <div class="item item-text-wrap">
+                    <h2>{{video.snippet.title}}</h2>
+                    <p><i class="ion ion-ios-calendar-outline"></i> {{video.snippet.publishedAt | limitTo: 1}}</p>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+                    <youtube-video class="embed-responsive-item" video-id="video.id.videoId" player-vars="playerVars"></youtube-video>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+<ion-view view-title="Готовые проекты(конструкции)" cache-view="true">
+  <ion-content class="background">
+        <ion-list>
+                <div class="card" ng-repeat="project in projects" ng-click="pathDescription(description.id)">
+                    <div class="item item-image">
+                        <img src="img/phoca_thumb_l_fotopechat.jpg" height="150">
+                    </div>
+                    <div class="item item-divider title-card">
+                        {{project.title}}
+                    </div>
+                </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

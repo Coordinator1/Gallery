@@ -1,0 +1,49 @@
+<ion-view view-title="Форма заказа">
+    <ion-content class="background">
+        <form name="orderForm" ng-submit="submit()">
+            <div class="card">
+                <div class="item item-divider">Параметры заказа:</div>
+                <div class="item">
+                    <i class="ion-checkmark-round"></i> Периметр: {{perimetr}} (м)
+                </div>
+                <div class="item">
+                    <i class="ion-checkmark-round"></i> Площадь: {{area}} (м²)
+                </div>
+                <div class="item">
+                    <i class="ion-checkmark-round"></i> Материал: {{materials}}
+                </div>
+                <div class="item" ng-show="vstavkaBagetView">
+                    <i class="ion-checkmark-round"></i> Вставка: {{vstavkaBagetView}}
+                </div>
+            </div>
+            <div class="row order-cost" ng-model="cost">
+                <div class="col">
+                    <b>Стоимость: {{costs}} руб.</b>
+                </div>
+            </div>
+            <!-- <div class="contacts">
+                <input type="text" placeholder="Введите имя" ng-model="order.name" class="order-name" required>
+                <input type="email" placeholder="Введите Ваш Email" 
+                        ng-model="order.email" class="order-email" required>
+                <input type="number" placeholder="Введите номер телефона" 
+                        ng-model="order.phone" class="order-phone" required>
+            </div> -->
+            <div class="list padding">
+                <label class="item item-input">
+                    <input type="text" placeholder="Имя" ng-model="order.nameApp" class="order-name" required>
+                </label>
+                <label class="item item-input">
+                    <input type="email" placeholder="E-mail" ng-model="order.emailApp" class="order-email" required>
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="Телефон" ng-model="order.phoneApp" class="order-phone" required>
+                </label>
+            </div>
+            <div class="text-center order-button">
+                <button class="button button-positive" type="submit">
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

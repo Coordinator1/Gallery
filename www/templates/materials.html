@@ -1,0 +1,39 @@
+<ion-view view-title="Материалы">
+    <ion-content class="background">
+        <form name="materialsForm">
+        <div class="padding">
+            <div class="card">
+                <div class="item item-divider">Выберите материал*</div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Материал:
+                        </div>
+                        <select ng-model="materialVal" class="option_select" ng-change="mainMaterials(materialVal)">
+                            <option disabled class="option_size">Выберите материал:</option>
+                            <option ng-repeat="material in materials" value="{{material.id}}" ng-disabled="{{!material.act}}">{{material.name}}</option>
+                        </select>
+                    </label>
+                </div>
+            <div class="card">
+                <div class="item item-divider">Выберите вставку</div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Вставка:
+                        </div>
+                        <select ng-model="vstavkaVal" class="option_select" ng-change="mainVstavka(vstavkaVal)">
+                            <option disabled class="option_size">Выберите вставку:</option>
+                            <option ng-repeat="vstavka in vstavkaBaget" value="{{vstavka.id}}" class="option_size">{{vstavka.name}}</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="text-center">
+            <a ng-href="{{toPageMoreParams}}">
+                <button class="button button-positive" type="submit" ng-click="goMoreParams(materialVal, vstavkaVal)">
+                    Далеe
+                </button>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

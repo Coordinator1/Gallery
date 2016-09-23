@@ -1,0 +1,16 @@
+<ion-view view-title="Категории" cache-view="true">
+    <ion-content class="background">
+        <div class="row responsive-lg">
+            <div class="col">
+                <div class="card categies" ng-repeat="sliderCat in sliderCats" ng-click="pathSliderCategories(sliderCat.id)">
+                    <div class="item item-image">
+                        <img src="img/phoca_thumb_l_fotopechat.jpg" height="150">
+                    </div>
+                    <div class="item item-divider title-card">
+                        {{sliderCat.title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

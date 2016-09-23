@@ -1,0 +1,12 @@
+<ion-view view-title="Выбор направления" cache-view="true">
+    <ion-content class="background">
+        <div class="card" ng-repeat="playlist in main" ng-click="pathProjects()">
+            <div class="item item-image">
+                <img src="img/phoca_thumb_l_fotopechat.jpg" height="150">
+            </div>
+            <div class="item item-divider title-card">
+                {{playlist.title}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

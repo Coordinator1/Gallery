@@ -1,0 +1,53 @@
+<ion-view view-title="Слайдер категории" cache-view="true">
+    <ion-content class="background">
+        <div class="row responsive-sm responsive-md responsive-lg">
+            <div class="col">
+                <b>Категория:</b> &laquo;Натяжные потоки&raquo;
+            </div>
+        </div>
+        <div class="row responsive-sm responsive-md responsive-lg">
+            <div class="col">
+                <b>Количество робот:</b> &laquo;22&raquo;
+            </div>
+        </div>
+        <div class="row responsive-sm responsive-md responsive-lg center-bold margin-top">
+            <div class="col">Слайдер галереи</div>
+        </div>
+        <div class="swiper-container swiper-init">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/phoca_thumb_l_fotopechat.jpg" class="slider-width">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="row responsive-sm responsive-md responsive-lg">
+            <div class="col">
+                <button class="button button-block button-positive" ng-click="previousCategories()">
+                    Пред. категория
+                </button>
+            </div>
+        </div>
+        <div class="row responsive-sm responsive-md responsive-lg">
+            <div class="col">
+                <button class="button button-block button-positive" ng-click="nextCategories()">
+                    След. категория
+                </button>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
